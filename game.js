@@ -38,6 +38,7 @@ function startOver () {
     $("#level-title").text("Welcome To Simon game");
     setTimeout(function () {
         nextSequence();
+        userClickedPattern = [];
     }, 2000);
     started = false;    
 }
