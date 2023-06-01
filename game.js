@@ -75,7 +75,7 @@ function animatePress(currentColour) {
 }
 
 
-$("body").on('click', function(event) { 
+$("body").touchstart(function() { 
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
