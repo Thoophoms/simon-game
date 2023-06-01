@@ -22,7 +22,7 @@ function checkAnswer (currentLevel) {
         $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game Over! Click Blue Screen to Restart");
+        $("#level-title").text("Game Over! Click Blue Screen or Press any Key to Restart");
         startOver();
     }
 }
