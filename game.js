@@ -96,6 +96,8 @@ function animatePress(currentColour) {
 // });
 
 
+startOver ();
+
 
     
 
