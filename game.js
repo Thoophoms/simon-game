@@ -75,7 +75,7 @@ function animatePress(currentColour) {
 }
 
 
-$("body").touchstart(function() { 
+$(document).touchstart(function() { 
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
@@ -84,6 +84,15 @@ $("body").touchstart(function() {
     started = true;
 });
 
+
+$(document).keydown(function(event) { 
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        userClickedPattern = [];
+    } 
+    started = true;
+});
 
 
     
