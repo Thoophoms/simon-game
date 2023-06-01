@@ -75,7 +75,7 @@ function animatePress(currentColour) {
 }
 
 
-$(document).on('keydown', function(event) { 
+$(document).on('click', function(event) { 
     if (!started) {
         $("#level-title").text("Level " + level);
         nextSequence();
