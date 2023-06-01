@@ -22,7 +22,10 @@ function checkAnswer (currentLevel) {
         $("body").removeClass("game-over");
         }, 200);
 
-        $("#level-title").text("Game Over! Press Any Key to Restart");
+        $("#level-title").text("Game Over! You Got It Wrong!");
+        setTimeout(function () {
+            nextSequence();
+            }, 2000);
         startOver();
     }
 }
@@ -31,7 +34,12 @@ function checkAnswer (currentLevel) {
 function startOver () {
     level = 0;
     gamePattern = [];
-    started = false;
+    started = true;
+    $("#level-title").text("Welcome To Simon game");
+    setTimeout(function () {
+        nextSequence();
+    }, 2000);
+    started = false;    
 }
 
 
@@ -75,14 +83,14 @@ function animatePress(currentColour) {
 }
 
 
-$(document).on('keydown', function(event) { 
-    if (!started) {
-        $("#level-title").text("Level " + level);
-        nextSequence();
-        userClickedPattern = [];
-    } 
-    started = true;
-});
+// $(document).on('keydown', function(event) { 
+//     if (!started) {
+//         $("#level-title").text("Level " + level);
+//         nextSequence();
+//         userClickedPattern = [];
+//     } 
+//     started = true;
+// });
 
 
 
