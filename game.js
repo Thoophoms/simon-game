@@ -32,15 +32,17 @@ function checkAnswer (currentLevel) {
 
 
 function startOver () {
-    level = 0;
-    gamePattern = [];
-    started = true;
-    $("#level-title").text("Welcome To Simon game");
-    setTimeout(function () {
-        nextSequence();
-        userClickedPattern = [];
-    }, 2000);
-    started = false;    
+    if (!started) {
+        level = 0;
+        gamePattern = [];
+        started = true;
+        $("#level-title").text("Welcome To Simon game");
+        setTimeout(function () {
+            nextSequence();
+            userClickedPattern = [];
+        }, 2000);
+    }
+    started = true;    
 }
 
 
